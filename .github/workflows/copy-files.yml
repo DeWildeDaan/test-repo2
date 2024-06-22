@@ -1,0 +1,24 @@
+name: Copy Files from Source Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run file copy action
+        uses: DeWildeDaan/copy-from-repo@1.0.0
+        with:
+          source_repo: "DeWildeDaan/test-repo"
+          source_path: "README.md"
+          destination_path: "data/"
+          commit_message: "Sync changes"
+          pr_title: "Test PR"
+          create_pr: "true"
+          pat: ${{ secrets.SOURCE_REPO_PAT }}
