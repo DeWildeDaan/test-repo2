@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run file copy action
-        uses: DeWildeDaan/copy-from-repo@2.0.1
+        uses: DeWildeDaan/copy-from-repo@2.0.2
         with:
           source_repo: "DeWildeDaan/test-repo"
           source_path: "README.md"
