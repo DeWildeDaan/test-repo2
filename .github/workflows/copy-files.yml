@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run file copy action
-        uses: DeWildeDaan/copy-from-repo@2.0.3
+        uses: DeWildeDaan/copy-from-repo@2.0.4
         with:
           source_repo: "DeWildeDaan/test-repo"
           source_path: "README.md"
