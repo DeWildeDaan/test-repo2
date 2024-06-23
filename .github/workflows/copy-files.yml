@@ -24,6 +24,6 @@ jobs:
           destination_path: "data/"
           commit_message: "Sync changes"
           pr_title: "Test PR"
-          create_pr: "true"
+          create_pr: true
           source_repo_token: ${{ secrets.SOURCE_REPO_PAT }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
